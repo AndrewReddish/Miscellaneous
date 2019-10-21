@@ -4,21 +4,21 @@ import java.util.Scanner;
 
 public class MapPractice {
 
-        public static void main(String args[]) throws IOException {
+        public static void main(String[] args) throws IOException {
 
-            int[] arr = createArray(2);
+            int[] arr = createArray();
             System.out.println("Enter array elements:");
             fillArray(arr);
-            System.out.println("The average of " + Arrays.toString(arr) + " equals " + findAverage(arr));
+            System.out.println("\nThe average of " + Arrays.toString(arr) + " equals " + findAverage(arr));
         }
 
-        private static int[] createArray(int len) {
+        private static int[] createArray() {
             Scanner scan = new Scanner(System.in);
             System.out.println("Define the length of array:");
-            len = scan.nextInt();
+            int len = scan.nextInt();
             return new int[len];
         }
-
+        
         private static void fillArray(int [] array) throws IOException {
 
             Scanner scan = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class MapPractice {
                 while (arrayIndex < array.length){
                     for (arrayIndex = 0; arrayIndex < array.length; arrayIndex++){
                         array [arrayIndex] = scan.nextInt();
-                        System.out.println(Arrays.toString(array));
+                        System.out.println("Elements: " + Arrays.toString(array));
                     }
                 }
         }
